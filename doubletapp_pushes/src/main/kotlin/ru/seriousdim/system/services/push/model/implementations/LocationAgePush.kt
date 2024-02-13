@@ -14,6 +14,6 @@ data class LocationAgePush(
 ): ILocationPush, IAgePush {
     override fun shouldBeFiltered(): Boolean {
         return super<ILocationPush>.shouldBeFiltered()
-                && super<IAgePush>.shouldBeFiltered()
+                || super<IAgePush>.shouldBeFiltered()
     }
 }

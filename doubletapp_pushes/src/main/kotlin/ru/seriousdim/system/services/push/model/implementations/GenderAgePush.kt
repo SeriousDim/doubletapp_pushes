@@ -13,6 +13,6 @@ data class GenderAgePush(
 ): IAgePush, IGenderPush {
     override fun shouldBeFiltered(): Boolean {
         return super<IAgePush>.shouldBeFiltered()
-                && super<IGenderPush>.shouldBeFiltered()
+                || super<IGenderPush>.shouldBeFiltered()
     }
 }

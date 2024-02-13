@@ -14,6 +14,6 @@ data class LocationPush(
 ): ILocationPush, IExpiringPush {
     override fun shouldBeFiltered(): Boolean {
         return super<ILocationPush>.shouldBeFiltered()
-                && super<IExpiringPush>.shouldBeFiltered()
+                || super<IExpiringPush>.shouldBeFiltered()
     }
 }

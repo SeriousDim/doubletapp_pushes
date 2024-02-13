@@ -4,11 +4,11 @@ import ru.seriousdim.system.model.user.Gender
 
 object GenderMapper {
     fun fromString(value: String): Gender {
-        when (value) {
+        return when (value) {
             "m" -> Gender.MALE
             "f" -> Gender.FEMALE
+            else -> Gender.valueOf(value)
         }
-        return Gender.valueOf(value)
     }
 
     fun toString(gender: Gender): String {

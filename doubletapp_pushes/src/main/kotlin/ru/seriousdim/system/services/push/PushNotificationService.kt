@@ -22,4 +22,8 @@ open class PushNotificationService: IPushNotificationService {
         }
     }
 
+    override fun getPushList(): List<IPush> {
+        return this.pushes
+    }
+
 }

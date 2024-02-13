@@ -12,6 +12,6 @@ data class AgeSpecificPush(
 ): IExpiringPush, IAgePush {
     override fun shouldBeFiltered(): Boolean {
         return super<IExpiringPush>.shouldBeFiltered()
-                && super<IAgePush>.shouldBeFiltered()
+                || super<IAgePush>.shouldBeFiltered()
     }
 }
